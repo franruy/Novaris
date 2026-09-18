@@ -49,6 +49,79 @@ a {
   padding: 1rem 0;
 }
 
+.traductor { position: relative; flex-shrink: 0; }
+
+.btn-idioma {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  min-height: 40px;
+  padding: .55rem .75rem;
+  border: 1px solid rgba(201, 160, 46, .65);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.btn-idioma:hover,
+.btn-idioma[aria-expanded="true"] {
+  border-color: var(--color-accent);
+  background: rgba(201, 160, 46, .18);
+  box-shadow: 0 7px 18px rgba(8, 18, 35, .22);
+  transform: translateY(-2px);
+}
+
+.btn-idioma:focus-visible,
+.menu-idiomas button:focus-visible { outline: 3px solid #f4d77d; outline-offset: 3px; }
+.btn-idioma .fa-globe { color: #f4d77d; font-size: 1rem; }
+.flecha-idioma { font-size: .65rem; transition: transform .2s ease; }
+.btn-idioma[aria-expanded="true"] .flecha-idioma { transform: rotate(180deg); }
+
+.menu-idiomas {
+  position: absolute;
+  top: calc(100% + .65rem);
+  right: 0;
+  z-index: 120;
+  width: 190px;
+  padding: .45rem;
+  border: 1px solid rgba(32, 58, 87, .12);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 35px rgba(8, 18, 35, .2);
+}
+
+.menu-idiomas[hidden] { display: none; }
+.menu-idiomas button {
+  display: grid;
+  grid-template-columns: 24px 1fr 16px;
+  align-items: center;
+  gap: .45rem;
+  width: 100%;
+  padding: .65rem .6rem;
+  border: 0;
+  border-radius: 9px;
+  color: var(--color-dark);
+  background: transparent;
+  font: inherit;
+  font-size: .83rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease;
+}
+
+.menu-idiomas button:hover,
+.menu-idiomas button[aria-current="true"] { color: var(--color-primary); background: #f4f0e3; }
+.menu-idiomas .fa-check { visibility: hidden; color: var(--color-accent); }
+.menu-idiomas button[aria-current="true"] .fa-check { visibility: visible; }
+.traductor-google { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
 .brand-group {
   display: flex;
   align-items: center;
