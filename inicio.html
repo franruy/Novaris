@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./styles.css" />
-  <link rel="icon" href="./Imagenes/logo.png" type="image/png">
+  <link rel="icon" href="../Imagenes/logo.png" type="image/png">
 
 </head>
 <body>
@@ -211,6 +211,37 @@
       </div>
     </section>
 
+    <section id="manuales" class="section manuals-section" aria-labelledby="manuales-titulo">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">Recursos para el equipo</p>
+          <h2 id="manuales-titulo">¿Trabajas para nosotros?</h2>
+          <p>Descargá los manuales de Novaris para aprender a usar el sistema y consultar los pasos de instalación.</p>
+        </div>
+
+        <!-- Rutas provisionales: reemplazar los href cuando estén disponibles los PDF. -->
+        <div class="manuals-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></div>
+            <h3>Manual de usuario</h3>
+            <p>Conocé las funciones del sistema y cómo utilizarlas en tu trabajo diario.</p>
+            <a class="button button-primary" href="./Manuales/manualdeusuario.pdf" download="manualdeusuario.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar manual de usuario (PDF)
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+            <h3>Manual de instalación</h3>
+            <p>Consultá los requisitos y los pasos para instalar y configurar el sistema.</p>
+            <a class="button button-primary" href="./Manuales/manualdeinstalacion.pdf" download="manualdeinstalacion.pdf">
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar manual de instalación (PDF)
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section">
       <div class="container cta-content">
         <div>
@@ -219,6 +250,66 @@
         </div>
         <a class="button button-light" href="mailto:novarisuruguay@gmail.com">Escribinos <i class="fa-solid fa-paper-plane"></i></a>
       </div>
+    </section>
+    <section id="reseñas" class="reseñas-section">
+        <div class="container-reseñas">
+            <h2>Lo que dicen nuestros usuarios</h2>
+            <div class="reseñas-grid">
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Con Novaris puedo reportar un problema y consultar el estado de mi ticket. Tener el seguimiento en un solo lugar me facilita pedir ayuda."</p>
+                    <div class="autor-reseña">
+                        <strong>María González</strong>
+                        <span>Solicitante · Seguimiento de tickets</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                    <p>"Ahora tenemos los equipos organizados por área y marca. El inventario de Novaris nos permite consultar qué recursos tenemos y a quién están asignados."</p>
+                    <div class="autor-reseña">
+                        <strong>Carlos Rodríguez</strong>
+                        <span>Administrador · Gestión de inventario</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Me resulta práctico consultar los equipos que tengo asignados y crear una solicitud cuando alguno presenta una falla. Todo queda registrado."</p>
+                    <div class="autor-reseña">
+                        <strong>Ana Martínez</strong>
+                        <span>Solicitante · Consulta de equipos</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"Puedo revisar mis tickets por prioridad y registrar el diagnóstico y la solución. Así mantengo organizado el trabajo de soporte técnico."</p>
+                    <div class="autor-reseña">
+                        <strong>Roberto Silva</strong>
+                        <span>Técnico · Atención de incidencias</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                    <p>"Desde el panel administro las solicitudes de registro y asigno los tickets a los técnicos. Los resúmenes me ayudan a ver cómo está el trabajo."</p>
+                    <div class="autor-reseña">
+                        <strong>Laura Fernández</strong>
+                        <span>Administradora · Usuarios y asignaciones</span>
+                    </div>
+                </div>
+
+                <div class="reseña-card">
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                    <p>"El historial me permite volver a consultar los trabajos resueltos y sus soluciones. Es útil para revisar cómo atendí una incidencia anterior."</p>
+                    <div class="autor-reseña">
+                        <strong>Miguel Torres</strong>
+                        <span>Técnico · Historial de trabajos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
   </main>
 
