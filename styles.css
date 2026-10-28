@@ -373,6 +373,34 @@ a {
   line-height: 1.65;
 }
 
+.manuals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1.3rem;
+}
+
+.manuals-grid .service-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.manuals-grid .service-card p {
+  margin-bottom: 1.5rem;
+}
+
+.manuals-grid .button {
+  margin-top: auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.manuals-grid .button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .trust-bar {
   padding: 1.65rem 0;
   color: #fff;
@@ -708,4 +736,267 @@ a {
   .red-social {
     width: min(100%, 220px);
   }
+}
+
+/* Mantener la navegación y las tarjetas dentro de cada tamaño de pantalla. */
+.hero-content > *,
+.about-grid > *,
+.faq-layout > *,
+.services-grid > *,
+.trust-grid > *,
+.process-grid > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .hero-content,
+  .about-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services-grid,
+  .trust-grid,
+  .process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faq-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 0;
+  }
+
+  .brand-group {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .traductor {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .menu {
+    grid-column: 1 / -1;
+    justify-content: center;
+    gap: .25rem;
+  }
+
+  .menu a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: .4rem .5rem;
+    font-size: .85rem;
+  }
+
+  .hero-content,
+  .about-grid,
+  .services-grid,
+  .trust-grid,
+  .process-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-card {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero h1,
+  .section h2,
+  .cta-section h2 {
+    font-size: clamp(30px, 7vw, 44px);
+  }
+
+  .menu-idiomas {
+    max-width: calc(100vw - 2rem);
+  }
+}
+.reseñas-section {
+    padding: 64px clamp(16px, 2.1vw, 32px) 80px;
+    background: linear-gradient(180deg, #fff, #f7f9fc);
+    scroll-margin-top: 140px;
+}
+
+.container-reseñas {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container-reseñas h2 {
+    position: relative;
+    margin: 0 0 54px;
+    text-align: center;
+    color: var(--color-dark);
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.2;
+    font-weight: 800;
+    text-wrap: balance;
+}
+
+.container-reseñas h2::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #d4af37;
+    border-radius: 999px;
+}
+
+.reseñas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    align-items: stretch;
+}
+
+.reseña-card {
+    min-width: 0;
+    min-height: 328px;
+    padding: 40px;
+    border: 1px solid #d3dce7;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(26, 45, 66, .1);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reseña-card .estrellas {
+    margin-bottom: 24px;
+    color: #d4af37;
+    font-size: 20px;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.reseña-card p {
+    color: #354b65;
+    font-size: 13.5px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    font-style: italic;
+    position: relative;
+    padding: 0 12px;
+    overflow-wrap: anywhere;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;  
+}
+
+.reseña-card p::before {
+    content: '"';
+    font-size: 40px;
+    color: var(--color-primary);
+    opacity: 0.2;
+    position: absolute;
+    top: -4px;
+    left: -6px;
+}
+
+.reseña-card p::after {
+    content: '"';
+    font-size: 40px;
+    color: var(--color-primary);
+    opacity: 0.2;
+    position: absolute;
+    bottom: -16px;
+    right: -8px;
+}
+
+.reseña-card .autor-reseña {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 22px;
+    border-top: 2px solid #d3dce7;
+    flex-shrink: 0;
+}
+
+.reseña-card .autor-reseña strong {
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.reseña-card .autor-reseña span {
+    color: #7c8a9d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    .reseñas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reseñas-section {
+        padding: 48px 24px 56px;
+    }
+    
+    .reseñas-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+    
+    .container-reseñas h2 {
+        font-size: clamp(26px, 5vw, 36px);
+        margin-bottom: 48px;
+    }
+    
+    .reseña-card {
+        padding: 32px;
+        min-height: auto;
+    }
+    
+    .reseña-card p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reseñas-section {
+        padding: 40px 16px 48px;
+    }
+    
+    .reseña-card {
+        padding: 28px 24px;
+        border-radius: 18px;
+    }
+    
+    .reseña-card p {
+        line-height: 1.75;
+    }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .reseña-card:hover {
+        transform: translateY(-4px);
+        border-color: #c9a02e;
+        box-shadow: 0 10px 24px rgba(26, 45, 66, .12);
+    }
 }
